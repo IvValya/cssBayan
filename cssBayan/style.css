@@ -1,0 +1,85 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+.main__h1 {
+    font-size: 2em;
+}
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+.mem {
+    list-style-type: none;
+}
+.mem__input {
+    display: none;
+}
+.wrapper:hover {
+    cursor: pointer;
+}
+.mem__h2, .wrapper:hover .mem__item:active .mem__h2{
+    font-size: 1em;
+    color: blueviolet;
+}
+.wrapper:hover .mem__item:active .mem__img {
+    opacity: 80%;
+}
+.mem__img {
+    display: none;
+    width: calc(25vh);
+    margin-left: auto;
+    margin-right: auto;
+}
+.mem__icon_open,
+.mem__icon_close {
+    display: none;
+}
+.wrapper:hover .mem__icon_close {
+    display: block;
+}
+.wrapper:hover .mem__icon_close,
+.wrapper:hover .mem__h2 {
+    color: black;
+}
+
+.wrapper:hover .mem__item:hover .mem__icon_open {
+    display:block;
+}
+.wrapper:hover .mem__item:hover .mem__icon_close {
+    display: none;
+}
+.mem__item:hover .mem__img {
+    display: block;
+}
+.mem__wrap {
+    display: flex;
+    column-gap: 15px;
+    justify-content: space-between;
+}
+
+.wrapper:hover .mem__item:active .mem__img{
+    background-color: aqua;
+}
+.mem__input:checked ~ .mem__img {
+    display: block;
+}
+.mem__input:disabled ~ .mem__img {
+    display: none;
+}
+.mem__input:checked ~ .mem__wrap .mem__h2 {
+    color: black;
+}
+.wrapper:hover .mem__input:checked ~ .mem__wrap > .mem__icon_open {
+    display: block;
+}
+.wrapper:hover .mem__input:checked ~  .mem__wrap > .mem__icon_close {
+    display: none;
+}
